@@ -43,15 +43,22 @@ jobs:
           name: RunReports
           path: testResults
 
-  cypress-run:
-    runs-on: windows-latest
+  cypress:
+    name: Run Cypress Tests
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          build: npx run login.spec.cy.js
-          start: npx start
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress tests
+        run: npx cypress run login.spec.cy.js
+        if: npx start login.spec.cy.js
