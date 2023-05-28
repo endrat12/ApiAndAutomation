@@ -42,3 +42,14 @@ jobs:
         with:
           name: RunReports
           path: testResults
+     # Run the Automation Cypress
+      - name: Run Cypress Automation
+        run: |
+          npm run login.spec.cy.js
+
+      # Upload the contents of Test Results directory to workspace
+      - name: Output the run Details
+        uses: actions/upload-artifact@v2
+        with:
+          name: RunReports
+          path: testResults
