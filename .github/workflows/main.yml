@@ -42,25 +42,3 @@ jobs:
         with:
           name: RunReports
           path: testResults
-
-  cypress:
-    name: Run Cypress Tests
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install Cypress dependencies
-        run: npm install cypress
-        
-      - name: Install Mocha test framework
-        run: npm install mocha
-
-      - name: Run Cypress Tests
-        run: npx cypress run https://github.com/endrat12/ApiAndAutomation/blob/37f8965b9d6f411a2aaf32eaa312cbb21d46321f/login.spec.cy.js
