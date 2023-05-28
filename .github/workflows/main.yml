@@ -63,4 +63,4 @@ jobs:
         run: npm install mocha
 
       - name: Run Cypress Tests
-        run: npx cypress run login.spec.cy.js
+        run: npx cypress run https://github.com/endrat12/ApiAndAutomation/blob/37f8965b9d6f411a2aaf32eaa312cbb21d46321f/login.spec.cy.js
