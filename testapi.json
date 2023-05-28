@@ -16,7 +16,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{ \"name\": \"John Doe\", \"job\": \"Software Engineer\" }"
+          "raw": "{ \"name\": \"Budi\", \"job\": \"Software Engineer\" }"
         },
         "url": {
           "raw": "https://reqres.in/api/users",
