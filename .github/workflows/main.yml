@@ -61,4 +61,3 @@ jobs:
 
       - name: Run Cypress tests
         run: npx cypress run login.spec.cy.js
-        if: npx start
