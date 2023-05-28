@@ -60,4 +60,4 @@ jobs:
         run: npm install cypress
 
       - name: Run Cypress Tests
-        run: npx cypress run --config-file https://github.com/endrat12/ApiAndAutomation/blob/main/login.spec.cy.js
+        run: npx cypress run --config-file C:\Users\Mamikos\Desktop\ENDTEST\cypress\e2e\login.spec.cy.js
