@@ -58,6 +58,9 @@ jobs:
 
       - name: Install Cypress dependencies
         run: npm install cypress
+        
+      - name: Install Mocha test framework
+        run: npm install mocha
 
       - name: Run Cypress Tests
         run: npx cypress run --config-file login.spec.cy.js
