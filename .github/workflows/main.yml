@@ -56,8 +56,8 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Install Cypress dependencies
+        run: npm install cypress
 
       - name: Run Cypress tests
         run: npx cypress run login.spec.cy.js
