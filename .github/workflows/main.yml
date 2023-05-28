@@ -60,4 +60,4 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
-        run: npx cypress login.spec.cy.js
+        run: npx cypress run login.spec.cy.js
